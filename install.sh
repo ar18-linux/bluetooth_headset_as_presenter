@@ -1,4 +1,5 @@
 #!/bin/bash
+# ar18
 
 # Script template version 2021-06-12.03
 # Make sure some modification to LD_PRELOAD will not alter the result or outcome in any way
@@ -29,8 +30,7 @@ IFS=$'\n' shell_options=($(shopt -op))
 # Set shell options for this script
 set -o pipefail
 set -eu
-# Start of script
-#------------------------------------------------------
+#################################SCRIPT_START##################################
 
 set -x
 
@@ -40,8 +40,7 @@ obtain_sudo_password
 
 ar18_install "${install_dir}" "${module_name}" "${script_dir}"
 
-#------------------------------------------------------
-# End of script
+##################################SCRIPT_END###################################
 # Restore old shell values
 set +x
 for option in "${shell_options[@]}"; do
